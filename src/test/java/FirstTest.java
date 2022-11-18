@@ -35,7 +35,7 @@ public class FirstTest extends BaseTest {
         try {
             searchResultsPage = new SearchResultsPage(driver);
             searchResultsPage.initFirstItem();
-            util.scrollUntil(searchResultsPage.firstItem);
+            util.scrollToElementUsingJs(searchResultsPage.firstItem);
             searchResultsPage.clickOnFirstItem();
             test.log(LogStatus.PASS, "clicked on first item");
 

@@ -31,7 +31,7 @@ public class SecondTest extends BaseTest {
     void DismissMessage() throws InterruptedException {
 
         try {
-            util.waitUntil(driver, By.cssSelector("input[data-action-type='DISMISS']"));
+            util.waitForElementToBeVisible(driver, By.cssSelector("input[data-action-type='DISMISS']"));
             homePage.clickOnDismiss();
         } catch (Exception e) {
             logger.log(Level.FINE, "*We're showing you items that ship to EG. To see items that ship to a different country, change your delivery address.\n* message didn't appear ");
